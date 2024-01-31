@@ -1,0 +1,66 @@
+<l-toast />
+<l-dialog />
+<view class="container">
+  <!-- <view class="user">
+    <view class="left">
+      <image src="https://thirdwx.qlogo.cn/mmopen/vi_32/POgEwh4mIHO4nibH0KlMECNjjGxQUq24ZEaGT4poC6icRiccVGKSyXwibcPq4BWmiaIGuG1icwxaQX6grC9VemZoJ8rg/132" mode="" />
+    </view>
+    <view class="right">
+      {{nickName}}
+    </view>
+    
+    <t-popup visible="{{visible}}" bind:visible-change="onVisibleChange" placement="{{cur.value || 'top'}}">
+  <view class="block block--{{cur.value}}">{{cur.text}}</view>
+</t-popup>
+
+
+
+  </view> -->
+
+
+
+ 
+
+
+
+  <!-- <l-avatar bind:tap="sign" class="avatar" open-data="{{['userAvatarUrl','userNickName']}}" size="160" placement="bottom" /> -->
+
+  <view class="tip">
+    <text class="tip-text1" style="position: relative; left: 49rpx; top: 2rpx">{{user.name}}</text>
+    <button bind:tap="onGoLogin" style="position: relative; left: 93rpx; top: 1rpx">登出</button>
+  </view>
+  <view class="tip">
+    <text class="tip-text">助力健康生活</text>
+    <!-- <button bind:tap="toGoLogin">登出</button> -->
+  </view>
+
+  <view class="main" style="position: relative; left: 0rpx; top: -87rpx">
+    <text class="main-text">常用功能</text>
+
+    <l-grid l-class="grid" col-num="2" row-num="2">
+
+      <l-grid-item l-grid-item-class="item" key="one" slot="one" bind:tap="onGoTarget">
+        <image src="/images/my/target.png"></image>
+        <text>定个目标</text>
+      </l-grid-item>
+
+      <l-grid-item l-grid-item-class="item" key="two" slot="two" bind:tap="onGoInfo">
+        <image src="/images/my/myInfo.png"></image>
+        <text>个人信息</text>
+      </l-grid-item>
+
+      <l-grid-item l-grid-item-class="item" key="three" slot="three" bind:tap="onGoAbout">
+        <image src="/images/my/联系我们.png"></image>
+        <text>关于我们</text>
+      </l-grid-item>
+
+      <l-grid-item l-grid-item-class="item" key="four" slot="four">
+        <l-button special="{{true}}" open-type="share">
+          <image src="/images/my/share.png"></image>
+        </l-button>
+        <text>分享卡卡</text>
+      </l-grid-item>
+
+    </l-grid>
+  </view>
+</view>

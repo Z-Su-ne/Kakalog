@@ -1,0 +1,123 @@
+
+.add-image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 40rpx;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0px 2px 5px 0px #bbb;
+  position: fixed;
+  right: 40rpx;
+  bottom: 0;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.my .header-amount {
+  background-color: #02C39A;
+
+}
+
+.date .header-amount {
+  background-color: #00A896;
+
+}
+
+.week .header-amount {
+  background-color: #028090;
+}
+
+.month .header-amount {
+  background-color: #05668D;
+}
+
+.header-amount {
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* background-color: #157658; */
+  border-radius: 10px;
+  margin: 20rpx 20rpx 20rpx 20rpx;
+  color: white;
+  position: relative;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  margin-left: 32rpx;
+}
+
+.consume-text {
+  font-size: 36rpx;
+  margin-top: 20rpx;
+}
+
+.consume-price {
+  margin-top: 16rpx;
+  position: relative;
+  left: 0rpx;
+  top: 40rpx
+}
+
+
+.income-view {
+  margin-top: 28rpx;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20rpx;
+}
+
+.tip-text {
+
+  font-size: 32rpx;
+}
+
+.tip-price {
+  margin-left: 10rpx;
+}
+
+
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-right: 80rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 20rpx;
+}
+
+.tip-text {
+  font-size: 28rpx;
+}
+
+.footer {
+  position: absolute;
+  display: flex;
+  left: 10%;
+  top: 60%;
+  font-weight: bold;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  color: #05668D;
+  text-shadow: 2px 2px #02C39A;
+  text-align: center
+
+}

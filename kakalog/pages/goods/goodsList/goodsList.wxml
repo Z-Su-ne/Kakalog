@@ -1,0 +1,22 @@
+<view class="goods">
+  <view class="left">
+    <text class="text">类目</text>
+    <t-radio-group bind:change="onChange" value="{{current}}" options="{{options}}" bind:tap="getGoodsList" icon= 'line' placement="right" default-checked/>
+    <!-- icon值为'circle' | 'line' | 'dot'  -->
+    <view class="button-example">
+      <t-button size="large" theme="light" variant="outline" bind:tap="toAdd">加个新的</t-button>
+    </view>
+    <view class="button-example">
+      <t-button size="large" theme="light" variant="outline" bind:tap="toDetails">历史记录</t-button>
+    </view>
+  </view>
+
+  <scroll-view class="right" scroll-y>
+    <!-- scroll实现滚动 -->
+    <!-- 右侧食物列表 -->
+    <block wx:for="{{goodsList}}" wx:key="index">
+      <t-cell title="{{item.name}}" description="{{item.caloric}}千卡/{{item.specification}}&#10;{{item.info}}" note="查看详情" hover bind:tap="toGoodsInfo" data-pid="{{item.pid}}" style="white-space:pre-wrap"/>
+    </block>
+  </scroll-view>
+
+</view>

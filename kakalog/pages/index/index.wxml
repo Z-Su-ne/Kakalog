@@ -1,0 +1,106 @@
+
+`<view class="my" bind:tap="gethealth" >
+  <view bind:tap="gotoTarget" class="header-amount">
+    <view class="left">
+      <text class="consume-text">我的目标</text>
+      <l-price class="consume-price" unit="Kg  " value="{{health.weightTarget}}" color="#fff"  unit-size="24" value-size="48" autofix />
+    </view>
+    <view class="right">
+      <view>
+        <text class="tip-text">当前体重 </text>
+        <l-price class="tip-price" unit="Kg " unit-size="24" value="{{health.weightCurrent}}" color="#fff" autofix />
+      </view>
+      <view>
+        <text class="tip-text">当前BMI </text>
+        <l-price class="tip-price" unit="Kg " unit-size="24" value="{{health.bmi}}" color="#fff" autofix />
+      </view>
+    </view>
+    <image style="width: 60rpx; height: 60rpx; display: block; box-sizing: border-box; position: relative; left: 22rpx; top: -22rpx" src="../../images/info/pushpin.png" mode="aspectFit"/>
+  </view>
+</view>
+
+<view class="date" bind:tap="getDateCaloric"  >
+  <view class="header-amount">
+    
+    <view class="left">
+      <text class="consume-text">本日热量</text>
+      <l-price class="consume-price" unit="千卡  "  value="{{DateCaloric}}" color="#fff" unit-size="24" value-size="48"  />
+    </view>
+
+    <view class="right">
+      <view>
+        <text class="tip-text" style="position: relative; left: NaNrpx; top: 1rpx">每日热量</text>
+        <l-price class="tip-price" unit="千卡  " unit-size="24" value="{{health.caloriesDaily}}" color="#fff"  />
+      </view>
+
+      <view>
+        <text class="tip-text">本日结余</text>
+        <l-price class="tip-price" unit="千卡  " unit-size="24" value="{{eatCan}}" color="#fff"  />
+      </view>
+    </view>
+    <image style="width: 60rpx; height: 60rpx; display: block; box-sizing: border-box; position: relative; left: 22rpx; top: -22rpx" src="../../images/info/pushpin.png" mode="aspectFit"/>  </view>
+</view>
+
+
+<view class="week"  >
+  <view bind:tap="gotoDetails" class="header-amount">
+    <view class="left">
+      <text class="consume-text">热量账单</text>
+      <l-price class="consume-price" value="{{ countday }}" color="#fff" unit="坚持记账(天) " unit-size="24" value-size="48"  />
+      <!-- <view class="income-view"> 
+        <text class="tip-text">当月收入</text>
+        <l-price class="tip-price" unit-size="24" value="{{billAmount.income}}" color="#fff" autofix />
+      </view> -->
+    </view>
+    <view class="right">
+      <view>
+        <text class="tip-text">记账单数</text>
+        <l-price class="tip-price" unit="总计  " unit-size="24" value="{{ countorder }}" color="#fff"  />
+      </view>
+      <view>
+        <text class="tip-text">热量总计</text>
+        <l-price class="tip-price" unit="千卡  " unit-size="24" value="{{ countcaloric }}" color="#fff"  />
+      </view>
+    </view>
+    <image style="width: 60rpx; height: 60rpx; display: block; box-sizing: border-box; position: relative; left: 22rpx; top: -22rpx" src="../../images/info/pushpin.png" mode="aspectFit"/>
+    </view>
+</view>
+
+<!-- <view class="month">
+  <view class="header-amount">
+    <view class="left">
+      <text class="consume-text">本月热量</text>
+      <l-price class="consume-price" value="114514" color="#fff" unit="千卡  " unit-size="24" value-size="48"/>
+    </view>
+    <view class="right">
+      <view>
+        <text class="tip-text">达标天数</text>
+        <l-price class="tip-price" unit="天  " unit-size="20" value="25" color="#fff" />
+      </view>
+      <view>
+        <text class="tip-text">累计减轻</text>
+        <l-price class="tip-price" unit="Kg  " unit-size="20" value="{{billAmount.balance}}" color="#fff" autofix />
+      </view>
+    </view>
+    <image style="width: 60rpx; height: 60rpx; display: block; box-sizing: border-box; position: relative; left: 22rpx; top: -22rpx" src="../../images/info/pushpin.png" mode="aspectFit"/>
+  </view>
+</view> -->
+
+
+<image class="add-image" src="/images/add.png" bind:tap="onClick" data-url="{{'../goods/goodsList/goodsList'}}"></image>
+
+<view style="justify-content: center;align-items: center;white-space:pre-wrap;">
+    <view>
+        <text  bind:tap="gotoAbout" class="footer" >
+        卡卡记账
+        KaKaLog
+        属于你的热量账本</text>
+        <text></text>
+    </view>
+    
+    <canvas canvas-id="lineCanvas" style="width: 300px; height: 200px;"></canvas>
+</view> 
+
+
+
+

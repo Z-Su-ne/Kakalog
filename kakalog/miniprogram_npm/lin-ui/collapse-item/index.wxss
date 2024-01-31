@@ -1,0 +1,5 @@
+.container{display:flex;flex-direction:column;width:100%; box-sizing:border-box}
+.container-title{display:flex;top: auto; justify-content:space-between;padding:10rpx;align-items:center;font-size:40rpx;color:#333}
+.container-title-l-icon{transition:.3s}
+.container-body{width:100%; top:auto;color:#888;box-sizing:border-box;font-size:30rpx;transition:height .3s ease-in-out;overflow:hidden}
+.container-body-wrapper{position:relative;padding:10rpx}

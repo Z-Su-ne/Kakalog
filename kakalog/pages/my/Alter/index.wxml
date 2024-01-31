@@ -1,0 +1,95 @@
+<form bindsubmit="formSubmit" report-submit="true">
+<!--姓名-->  
+<view class="section">
+  <view class="section-title">用户编号：</view>
+  <view class="blok" >
+    <input type="text" name="username" value="{{username}}" placeholder="请输入uid" bindinput="bindUsernameInput"/>
+  </view>
+</view>
+<!--性别--> 
+<view class="section">
+  <view class="section-title">性别：</view>
+  <view class="blok2" >
+    <radio-group name="gender" bindchange="handleGenderChange">
+      <label><radio value="男" checked="{{gender=='男'?'checked':''}}"/>男</label>
+      <label><radio value="女" checked="{{gender=='女'?'checked':''}}"/>女</label>
+    </radio-group>
+  </view>
+</view>
+<!--当前体重--> 
+<!-- <view class="section">  
+  <view class="section-title">目标体重：</view>  
+  <view class="blok3" > 
+    <input type="text" name="phone" value="{{phone}}" placeholder="（单位：kg）"/>  
+  </view>  
+</view> -->
+<view class="section2">
+    <t-cell class="mb-16 custom-margin" title="当前体重:" arrow hover note="{{weighText}}" bind:click="onWeighPicker" />
+<t-picker
+  visible="{{weighVisible}}"
+  value="{{weighValue}}"
+  data-key="weigh"
+  title="选择体重"
+  cancelBtn="取消"
+  confirmBtn="确认"
+  bindchange="onPickerChange0"
+  bindpick="onColumnChange0"
+  bindcancel="onPickerCancel0"
+>
+  <t-picker-item options="{{weighs}}" />
+</t-picker> 
+</view>
+<view class="section">
+  <view class="section-title">身高：</view>
+  <view class="blok4" > 
+    <input type="text" name="phone" value="{{phone}}" placeholder="请输入身高(cm)" bindinput="handleHeightInput"/>
+  </view>
+</view>
+<view class="section2">
+    <t-cell class="mb-16 custom-margin" title="年龄:" arrow hover note="{{ageText}}" bind:click="onAgePicker" />
+<t-picker
+  visible="{{ageVisible}}"
+  value="{{ageValue}}"
+  data-key="age"
+  title="选择年龄"
+  cancelBtn="取消"
+  confirmBtn="确认"
+  bindchange="onPickerChange2"
+  bindpick="onColumnChange2"
+  bindcancel="onPickerCancel2"
+>
+  <t-picker-item options="{{ages}}" />
+</t-picker> 
+</view>
+<!--邮箱--> 
+<!-- <view class="section">
+  <view class="section-title">邮箱：</view>
+  <view>
+    <input type="text" name="email" value="{{email}}" placeholder="请输入邮箱"/>
+  </view>
+</view> -->
+<view class="section2">
+    <t-cell class="mb-16 custom-margin" title="目标体重:" arrow hover note="{{cityText}}" bind:click="onCityPicker" />
+<t-picker
+  visible="{{cityVisible}}"
+  value="{{cityValue}}"
+  data-key="city"
+  title="选择体重"
+  cancelBtn="取消"
+  confirmBtn="确认"
+  bindchange="onPickerChange"
+  bindpick="onColumnChange"
+  bindcancel="onPickerCancel"
+>
+  <t-picker-item options="{{citys}}" />
+</t-picker> 
+</view>
+<t-message id="t-message" />
+
+<view class="message-example">
+  <t-button t-class="external-class" theme="primary" variant="outline" size="large" block bind:tap="handleTap" 
+    >保存</t-button
+  >
+</view>
+</form>
+<!-- bind:tap="updateHealthsList" -->

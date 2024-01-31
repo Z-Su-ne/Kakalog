@@ -1,0 +1,18 @@
+<l-toast />
+<l-notice-bar front-icon-name="notification" type="still" show="{{true}}">合理目标，健康达标，享受生活</l-notice-bar>
+<view class="container">
+
+  <view class="input-view">
+    <l-input l-class="l-input" l-input-class="" hide-label="{{true}}" class="remark" bind:linconfirm="onConfirmRemark"
+      bind:linblur="onConfirmRemark" bind:lininput="onConfirmRemark" focus="{{true}}" type="number" showRow="{{false}}" maxlength="8" value="{{amount}}"/>
+  </view>
+
+  <l-button class="btn" type="default" shape="semicircle" width="250" height="80" bind:lintap="onSave">设置目标</l-button>
+
+  <view class="block">
+    <t-steps theme="dot" current="{{third}}" bind:change="onThirdChange" active-length="90%">
+  <t-step-item wx:for="{{4}}" wx:key="index" title="{{_.getText(third, index)}}" content="这是当前达成情况" />
+</t-steps>
+</view>
+
+</view>

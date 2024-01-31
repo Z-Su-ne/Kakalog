@@ -1,0 +1,17 @@
+<!-- <form bindsubmit="formSubmit" report-submit="true"> -->
+    <view style="justify-content: center;align-items: center;white-space:pre-wrap;">
+    <text class="login"> 用户注册</text>    
+</view> 
+<view style="color: #168d8d;">账号</view>
+ <input type="text" placeholder="请输入账号" bindinput="getAccount"></input>
+ <view style="color: #168d8d;">密码</view>
+  <input type="text" placeholder="请输入密码" bindinput="getPassword"></input>
+  <view class="btn">
+  <button class="btn-login" type="plain" bindtap="register">注册</button>
+  </view>
+  <image src="/images/my/show.png" mode="widthFix" class="pc"></image>
+  <view style="justify-content: center;align-items: center;white-space:pre-wrap;">
+</view>
+
+
+<!-- </form> -->

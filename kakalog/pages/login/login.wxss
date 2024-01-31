@@ -1,0 +1,139 @@
+page{
+    font-size: 32rpx;
+  }
+  .c{
+      color: #168d8d;
+  }
+  .section{
+    padding: 43rpx;
+    border-bottom: 1px solid gray;
+    height: 30rpx;
+  }
+  .section2{
+    padding: 37rpx;
+    height: 40rpx;
+    border-bottom: 1px solid gray;
+  }
+  .section:last-child{
+    border: none;
+  }
+  .section-title{
+    width: 35%;
+    float: left;
+  }
+  label{
+    padding: 0 20rpx;
+  }
+  .mb-16 {
+    margin-bottom: 32rpx;
+  }
+  .custom-margin {
+    margin-top: -18px;
+    margin-left: -17px;
+    /* border-bottom: 1px solid gray;  */
+  }
+  .message-example {
+    margin: 50rpx;
+    top: 210rpx;
+  }
+  
+  .external-class {
+    margin: 0 0 3px 0;
+  }
+
+  .blok{
+      position: absolute;
+      margin: 50rpx;
+      top: 0rpx;
+      left: 440rpx;
+      height: 230rpx;
+  }
+  .blok2{
+    position: absolute;
+    margin: 50rpx;
+    top: 105rpx;
+    left: 400rpx;
+    height: 230rpx;
+}
+.blok3{
+    position: absolute;
+    margin: 50rpx;
+    top: 230rpx;
+    left: 420rpx;
+    height: 230rpx;
+}
+.blok4{
+    position: absolute;
+    margin: 50rpx;
+    top: 340rpx;
+    left: 440rpx;
+    height: 230rpx;
+}
+input{
+    margin: 20rpx;
+    padding-left: 10rpx;
+    height: 80rpx;
+    border: 1rpx solid #c3c3c3;
+}
+view{
+    margin: 20rpx;
+}
+.btn{
+    display: flex;
+    margin-top: 50rpx;     
+}
+/* .tosign{
+    display: flex;
+    margin-top: 30rpx;
+    text-align: center;
+} */
+.tosign {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* 在主轴上居中对齐 */
+    align-items: center;
+  }
+.gray-button {
+    color: #168d8d; 
+    position: relative;
+    left: 7rpx;
+  }
+.login{
+    color:#168d8d;
+    text-align: center;
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    position: relative;
+    display: flex;
+    left: -1%;
+    top: 10%;
+}
+.login1{
+    color:rgba(103, 180, 224, 0.836);
+    text-align: center;
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    position: fixed;
+    text-shadow: 3px 3px rgb(140, 231, 65);
+    display: flex;
+    left: 35%;
+    top: 82%;
+}
+.btn-login{
+    color: #168d8d;
+}
+.pc{
+    top: 65%; 
+    border-radius: 30%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    position: fixed;
+    height: 300px;
+    width: 300px;
+}
