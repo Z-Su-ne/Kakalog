@@ -1,0 +1,3 @@
+- 本文件为kakalog的后端程序
+- 后端接口测试集成在localhost:8080/swagger-ui.html
+- 配置请修改kakalog-main/src/main/resources/application.yml下的数据库
