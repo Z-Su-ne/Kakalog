@@ -1,6 +1,7 @@
 ## kakalog/卡卡记账，一个基于SpringBoot和微信小程序的热量记账应用
 
 - 项目展示
+请看show.mp4
 <video src="show.mp4" controls title="Title"></video>
 
 - 项目介绍
