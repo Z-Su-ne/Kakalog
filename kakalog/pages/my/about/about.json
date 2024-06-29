@@ -1,8 +1,0 @@
-{
-    "component": true,
-  "usingComponents": {
-    "t-rate": "tdesign-miniprogram/rate/rate"
-  },
-  "navigationBarTitleText": "关于我们",
-  "navigationStyle": "default"
-}
