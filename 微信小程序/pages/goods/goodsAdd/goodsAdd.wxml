@@ -1,0 +1,51 @@
+<view class="header">
+  <!-- 顶部卡片 -->
+  <view class="header-amount">
+    <view class="left">
+      <text class="consume-text">详情信息</text>
+      <view class="consume">请添加新的食物/运动</view>
+    </view>
+    <view class="right">
+      <!-- <view>
+      <text class="tip-text">编号pid </text>
+      <view class="tip">{{pid}}</view>
+    </view> -->
+      <!-- <view>
+        <text class="tip-text">当前状态</text>
+        <view class="tip">编辑中</view>
+      </view> -->
+    </view>
+  </view>
+</view>
+<!-- 信息内容 -->
+<view class="info">
+  <!-- <t-input label="名称" placeholder="自定义项的名称" align="center" bind:change="handleNameInput" />
+  <t-input label="说明" placeholder="自定义项的说明" align="center" bind:change="handleInfoInput" />
+  <t-input label="规格" placeholder="自定义项的规格" align="center" bind:change="handleSpecificationInput" />
+  <t-input label="热量" placeholder="自定义项的热量（千卡）" align="center" status="success" tips="填写正负数字，不需单位" bind:change="handleCaloricInput" />
+  <t-input label="类别" placeholder="1:饮食；2:运动；3:收藏" align="center" status="warning" tips="只需要填写数字，默认添加到收藏项" bind:change="handleKindInput" /> -->
+  <t-input label="名称" prefixIcon="/images/编辑.png" placeholder="请填写文字" align="right" bind:change="handleNameInput" />
+  <t-input label="说明" prefixIcon="/images/发现.png" placeholder="请填写文字" align="right" bind:change="handleInfoInput" />
+  <t-input label="规格" prefixIcon="/images/6.png" placeholder="请填写文字，如100克" align="right" bind:change="handleSpecificationInput" />
+  <t-input label="热量" prefixIcon="/images/热量.png" placeholder="请填写数字" suffix="千卡" align="right" type="number" bind:change="handleCaloricInput" />
+  <t-input label="类别" prefixIcon="/images/0.png" placeholder="{{kindtext[upKind]}}" align="right" disabled>
+    <t-button slot="suffix" theme="primary" size="extra-small" bind:tap="handleKindInput"> 切换 </t-button>
+  </t-input>
+  <!-- <t-input label="类别" prefixIcon="/images/3.png" placeholder="{{goodsInfo.kind}}:{{kindtext[goodsInfo.kind-1]}}" align="center" status="warning" tips="修改只需要填写数字" bind:change="handleKindInput" /> -->
+  <!-- <t-cell leftIcon="/images/3.png" title="收藏" hover note="{{note[upKind]}}">
+  <t-switch 
+  bind:change="handleChange"
+  value="{{defaultValue}}" 
+  defaultValue="{{defaultValue}}" 
+  icon="{{['check', 'close']}}" 
+  slot="note" />
+</t-cell> -->
+</view>
+
+<!-- 添加记录 -->
+<view class="add" style="margin-top: 30px;">
+  <t-divider content="增加一个" align="left" />
+  <view class="button-example1">
+    <t-button size="large" theme="primary"  bind:tap="addGoods">new一个</t-button>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+{
+  "navigationBarTitleText": "热量账单",
+  "component": true,
+  "usingComponents": {
+    "t-cell-group": "tdesign-miniprogram/cell-group/cell-group",
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "t-picker": "tdesign-miniprogram/picker/picker",
+    "t-picker-item": "tdesign-miniprogram/picker-item/picker-item",
+    "t-col": "tdesign-miniprogram/col/col",
+    "t-row": "tdesign-miniprogram/row/row",
+    "t-date-time-picker": "tdesign-miniprogram/date-time-picker/date-time-picker",  
+    "t-tabs": "tdesign-miniprogram/tabs/tabs",
+    "t-tab-panel": "tdesign-miniprogram/tab-panel/tab-panel",
+    "t-tag": "tdesign-miniprogram/tag/tag",
+    "t-notice-bar": "tdesign-miniprogram/notice-bar/notice-bar",
+    "t-badge": "tdesign-miniprogram/badge/badge",
+    "t-switch": "tdesign-miniprogram/switch/switch",
+    "t-icon": "tdesign-miniprogram/icon/icon"
+  }
+}

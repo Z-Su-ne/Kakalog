@@ -1,0 +1,23 @@
+<view class="show">
+  <view class="txt" style="flex:10">
+    <text class="txt">
+      Hello,kakalog!
+      卡卡记账，一个热量账本
+      用于记录每天热量消耗情况
+      助力健康生活
+    </text>
+  </view>
+
+
+  <view class="container" style="flex:1">
+    <text class="txt2">使用情况，打个分吧</text>
+
+    <view class="demo-rate">
+      <view class="demo-rate__title">评分</view>
+      <t-rate value="{{value}}" bind:change="onChange" />
+    </view>
+
+    <!-- 基础页脚 只有版权信息 -->
+    <t-footer text="{{text}}"></t-footer>
+  </view>
+</view>

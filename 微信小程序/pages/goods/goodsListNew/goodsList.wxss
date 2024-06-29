@@ -1,0 +1,49 @@
+.show {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* 填充整个视口高度 */
+  justify-content: space-between;
+}
+
+.tabs{
+  /* 类型选择部分的样式 */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.custom-tabs {
+  margin-bottom: 32rpx;
+  position: sticky;
+  top: 0;
+  z-index: 2; /* 保证 .custom-tabs 在顶部 */
+}
+
+.show-cart {
+  flex: 1; /* 填充剩余空间 */
+  overflow-y: scroll;
+  height: auto;
+}
+
+.button {
+  display: flex; /* 开启 Flexbox 布局 */
+  justify-content: space-around; /* 按钮均匀分布 */
+  align-items: center; /* 垂直居中对齐 */
+  padding: 10px 0; /* 上下边距10px */
+  position: sticky; /* 粘性定位 */
+  bottom: 0; /* 定位于视口的底部 */
+  z-index: 1; /* 设置层级，确保按钮容器在页面底部 */
+  width: 100%; /* 容器宽度设置为100% */
+  border-radius: 10px 10px 0 0;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px -3px 3px rgba(5, 102, 141,  0.1);
+  /* 水平偏移，垂直偏移，模糊半径，颜色 */
+}
+
+.t-button {
+  width: 180px;
+  flex: 1; /* 每个按钮都占用等量的空间 */
+  padding: 0 5px; /* 每个按钮例子之间添加5px的内边距 */
+}
+

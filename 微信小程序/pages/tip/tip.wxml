@@ -1,0 +1,13 @@
+<!--pages/tip/tip.wxml-->
+<view>
+  <image class="image" src="{{image}}" ></image>
+</view>
+<view class="otherframe">
+    <text class="tipsfont">Tips:</text>
+</view>
+<view class="frame">
+  <view class="font">{{title}}</view>
+</view>
+<view class="frame">
+  <view class="font1">{{content}}</view>
+</view>

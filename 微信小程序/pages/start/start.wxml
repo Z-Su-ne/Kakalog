@@ -1,0 +1,15 @@
+<!--pages/start/start.wxml-->
+    <!-- <view class="container" bindtouchstart="containerTap"> -->
+        <view v-if="showTransition" :style="{ background: color }" class="card"
+                    :class="{ active: transitionCompleted }" bindtouchstart="containerTap" style="width: 750rpx; height: 1599rpx; display: flex; box-sizing: border-box; position: relative; left: 2rpx; top: -200rpx">
+                    欢迎进入
+        </view>
+        <view v-else class="pages" :style="position: relative; left: -1rpx; top: -105rpx; border: 1rex;" style="position: relative; left: 295rpx; top: -739rpx; width: 166rpx; height: 72rpx; display: block; box-sizing: border-box">
+            <text bind:tap="gotoLogin" class="text">
+                LOGIN</text> 
+        </view> 
+        <view class="ripple" style="{{rippleStyle}}"></view>
+<!-- </view> -->
+
+
+

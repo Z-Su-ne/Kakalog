@@ -1,0 +1,64 @@
+<form bindsubmit="formSubmit" report-submit="true">
+  <t-cell  title="用户名" leftIcon="/images/10.png" note="{{user.name}}"  />
+<t-input
+prefixIcon="/images/11.png"
+  label="性别"
+  placeholder="男/女"
+  suffix=" "
+  align="right"
+  type="number"
+  bindchange="onGenderInput"
+  tips="{{genderError ? '请输入正确的性别：男/女' : ''}}"
+  t-class-tips="tips"
+/>
+<t-input
+prefixIcon="/images/皇冠.png"
+  label="年龄"
+  placeholder="0"
+  suffix="岁"
+  align="right"
+  type="number"
+  bindchange="onAgeInput"
+  tips="{{ageError ? '年龄值的范围为：12--60岁' : ''}}"
+  t-class-tips="tips"
+/>
+
+<t-input
+prefixIcon="/images/13.png"
+  label="身高"
+  placeholder="0.00"
+  suffix="cm"
+  align="right"
+  type="number"
+  bindchange="onHeightInput"
+  tips="{{heightError ? '请输入正确的身高值：120.00--240.00cm' : ''}}"
+  t-class-tips="tips"
+/>
+<t-input
+prefixIcon="/images/7.png"
+  label="当前体重"
+  placeholder="0.00"
+  suffix="KG"
+  align="right"
+  type="number"
+  bindchange="onWeightCurrentInput"
+  tips="{{weightCurrentError ? '请输入正确的体重值：30.00--150.00KG' : ''}}"
+  t-class-tips="tips"
+/>
+<t-input
+prefixIcon="/images/7.png"
+  label="目标体重"
+  placeholder="0.00"
+  suffix="KG"
+  align="right"
+  type="number"
+  bindchange="onWeightTargetInput"
+  tips="{{weightTargetError ? '请输入正确的体重值：30.00--150.00KG' : ''}}"
+  t-class-tips="tips"
+/>
+<t-cell />
+<view class="button-example">
+  <t-button bind:tap="updateHealthsList" theme="light" size="large" variant="outline" block>提交</t-button>
+</view>
+</form>
+

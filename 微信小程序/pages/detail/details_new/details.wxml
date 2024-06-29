@@ -1,0 +1,38 @@
+<view class="log">
+  <!-- 类型筛选 -->
+  <view class="select">
+    <t-tabs defaultValue="{{current}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs" bind:tap="getDetailsList" bind:top="updateIsAll">
+      <t-tab-panel label="ALL" value="0" icon="/images/0.png" bind:tap="getDetailsList" bind:top="updateIsAll" />
+      <t-tab-panel label="饮食" value="1" icon="/images/1.png" bind:tap="getDetailsList" bind:top="updateIsAll" />
+      <t-tab-panel label="运动" value="2" icon="/images/2.png" bind:tap="getDetailsList" bind:top="updateIsAll" />
+      <t-tab-panel label="收藏" value="3" icon="/images/3.png" bind:tap="getDetailsList" bind:top="updateIsAll" />
+    </t-tabs>
+  </view>
+
+  <!-- 用户记录 -->
+  <scroll-view class="show-cart" scroll-y>
+    <!-- 遍历日期 -->
+    <view wx:for="{{detailsList}}" wx:key="day">
+      <t-notice-bar visible="{{true}}" prefixIcon="{{false}}" content="{{month}}-{{item.day}}"></t-notice-bar>
+      <!-- 遍历日期下的 details -->
+      <view wx:for="{{item.data}}" wx:key="oid">
+        <t-cell title="{{item.name}}" description="共计 {{item.caloricSum}} 千卡" note="查看详情 >" hover bind:tap="toDetailsInfo" data-did="{{item.did}}" style="white-space:pre-wrap" image="/images/{{item.kind >= 3 ? item.kind-2 : item.kind}}.png" />
+      </view>
+    </view>
+  </scroll-view>
+
+
+  <!-- 补录与日期调整 -->
+  <view class="add-date">
+    <!-- 补录按钮 -->
+    <view class="add">
+      <t-button class="button" theme="primary" icon="/images/编辑.png" content="漏记了？加一个！" size="large" class="margin" tyle="width: 100%;" bind:tap="toAddOrder" style="height: 50px;"></t-button>
+    </view>
+    <!-- 日期选择 -->
+    <view class="date">
+      <t-cell title="日期" leftIcon="/images/等待.png"  arrow data-mode="month" bindtap="showPicker" t-class="panel-item" style="height: 50px; background: #9797974d; ; color: white; font-weight: bold;" />
+      <t-date-time-picker title="选择日期" visible="{{monthVisible}}" mode="month" value="{{month}}" format="YYYY-MM" bindchange="onConfirm" bindpick="onColumnChange" bindcancel="hidePicker" start="{{start}}" end="{{end}}" />
+    </view>
+  </view>
+
+</view>

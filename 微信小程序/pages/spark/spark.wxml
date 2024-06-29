@@ -1,0 +1,13 @@
+<view class="chat-container">
+    <scroll-view scroll-y="true" class="chat-content"scroll-into-view="{{bottomViewId}}"  scroll-with-animation="true">
+    <view wx:for="{{messages}}" wx:key="unique" class="message-item" id="msg-{{index}}">
+      <image wx:if="{{item.type === 'received'}}" class="avatar received" src="/images/AI.png" />
+      <view class="message {{item.type}}">{{item.content}}</view>
+      <image wx:if="{{item.type === 'sent'}}" class="avatar sent" src="/images/头像.png" />
+    </view>
+    </scroll-view>
+<view class="input-area">
+    <input class="input-box" data-event-opts="{{[['input',[['__set_model',['','TEXT','$event',[]]]]]]}}" style=" border:1px solid gainsboro;" value="{{TEXT}}" bindinput="__e"/>
+    <button class="send-button" data-event-opts="{{[['tap',[['sendToSpark']]]]}}"  bindtap="__e">发送</button>
+</view>
+</view>

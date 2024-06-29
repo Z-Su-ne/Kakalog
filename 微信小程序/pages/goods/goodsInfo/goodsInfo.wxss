@@ -1,0 +1,135 @@
+.custom-color {
+  --td-switch-checked-color: #00A870;
+}
+
+
+.info {
+  border: 2rpx solid #00A896;
+  margin: 20rpx 20rpx 20rpx 20rpx;
+  border-radius: 10px;
+}
+
+
+.header-amount {
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #00A896;
+  border-radius: 10px;
+  margin: 20rpx 20rpx 20rpx 20rpx;
+  color: white;
+  position: relative;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  margin-left: 32rpx;
+}
+
+.consume-text {
+  font-size: 34rpx;
+  margin-top: 20rpx;
+}
+
+.consume {
+  font-size: 42rpx;
+  margin-top: 16rpx;
+  position: relative;
+  left: 0rpx;
+  top: 40rpx
+}
+
+.margin {
+  margin-left: 32rpx;
+}
+
+
+
+.income-view {
+  margin-top: 28rpx;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 20rpx;
+}
+
+.tip-text {
+
+  font-size: 32rpx;
+}
+
+.tip {
+  margin-left: 10rpx;
+}
+
+
+.right {
+  display: flex;
+  flex-direction: column;
+  margin-right: 80rpx;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 20rpx;
+}
+
+.tip-text {
+  font-size: 28rpx;
+}
+
+.footer {
+  position: relative;
+  left: 269rpx;
+  top: 57rpx;
+  font-weight: bold;
+  font-size: 25px;
+  color: #05668D;
+  text-shadow: 3px 3px #02C39A;
+  font-style: italic;
+  text-align: center
+}
+
+.stepper-example {
+  padding: 32rpx;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48rpx;
+  background-color: #fff;
+
+
+
+}
+
+.button-example1 {
+  position: relative;
+  left: 515rpx;
+  top: -105rpx
+}
+
+/* .button-example {
+  margin: 0 32rpx;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32rpx;
+} */
+
+/* .button-example:not(:last-child) {
+  margin-bottom: 32rpx;
+} */
+.add {
+  height: 350rpx;
+  display: block;
+  box-sizing: border-box;
+  border: 2rpx solid #00A896;
+  margin: 30rpx 30rpx  30rpx;
+  border-radius: 10px;
+}
+
+.panel-item {
+  margin-bottom: 32rpx;
+}
+
+.panel-item::after {
+  border: 0;
+}

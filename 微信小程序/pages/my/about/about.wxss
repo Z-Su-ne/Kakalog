@@ -1,0 +1,70 @@
+.txt {
+  position: relative;
+  /* left: 30rpx; */
+  top: 10%;
+  font-weight: bold;
+  font-size: 25px;
+  color: #05668D;
+  text-shadow: 3px 3px rgb(2, 195, 154,0.4);
+  font-style: italic;
+  text-align: center
+}
+.demo-rate {
+    background-color: #fff;
+    height: 96rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32rpx;
+    border-bottom: solid 1rpx #f0f0f0;
+    border-top: solid 1rpx #f0f0f0;
+    margin-top: 32rpx;
+    margin-bottom: 32rpx;
+    /* top: -20rpx; */
+  }
+  
+  .demo-rate__title {
+    font-weight: bold;
+    font-size: 20px;
+    color: #05668D;
+    text-shadow: 3px 3px rgb(2, 195, 154,0.4);
+    width: 150rpx;
+  }
+  
+  .demo-rate__transparent {
+    background-color: transparent;
+    /* padding-left: 32rpx; */
+    border: 0;
+  }
+  .txt2{
+    font-weight: bold;
+    font-size: 12px;
+    color: #05668D;
+    text-shadow: 3px 3px rgb(2, 195, 154,0.4);
+    /* font-style: italic; */
+    position: relative;
+    /* left: 30rpx; */
+    /* top: -40rpx; */
+  }
+  .container {
+    display: flex; /* 开启 Flexbox 布局 */
+    /* justify-content: space-around; 按钮均匀分布 */
+    align-items: center; /* 垂直居中对齐 */
+    padding: 30px 0; 
+    /* 上下边距10px */
+    /* position: sticky; 粘性定位 */
+    bottom: 30rpx; /* 定位于视口的底部 */
+    z-index: 1; /* 设置层级，确保按钮容器在页面底部 */
+    width: 100%; /* 容器宽度设置为100% */
+    /* border-radius: 10px 10px 0 0; */
+    /* background: rgba(255, 255, 255, 0.8); */
+    /* box-shadow: 0px -3px 3px rgba(5, 102, 141,  0.1); */
+    /* 水平偏移，垂直偏移，模糊半径，颜色 */
+  }
+
+  .show {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 填充整个视口高度 */
+    justify-content: space-between;
+  }

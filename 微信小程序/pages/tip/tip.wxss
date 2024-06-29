@@ -1,0 +1,68 @@
+/* tip.wxss */
+/* image.css */
+
+/* 图片容器样式 */
+
+
+/* 图片样式 */
+.image {
+  display: block;
+    margin: 0 auto;
+    width: 80%;
+    
+}
+
+
+
+/* 整体样式 */
+.frame {
+  display: flex; /* 使用 Flex 布局 */
+  justify-content: center; /* 在水平方向上居中 */
+  align-items: center; /* 在垂直方向上居中 */
+  padding: 20rpx; /* 设置内边距 */
+  background-color: #f8f8f8; /* 设置背景颜色 */
+  border-radius: 10rpx; /* 设置圆角 */
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.1); /* 设置阴影 */
+}
+
+.otherframe{
+  display: flex; /* 使用 Flex 布局 */
+  align-items: center; /* 在垂直方向上居中 */
+  padding: 20rpx; /* 设置内边距 */
+  background-color: #f8f8f8; /* 设置背景颜色 */
+  border-radius: 10rpx; /* 设置圆角 */
+  box-shadow: 0 2rpx 5rpx rgba(0, 0, 0, 0.1); /* 设置阴影 */
+}
+
+.tipsfont{
+  font-weight: border;
+    display: flex;
+    justify-content: center;
+  align-items: center; /* 在垂直方向上居中 */
+  font-size: 50rpx; /* 设置字体大小 */
+  color: #168d8d; /* 设置字体颜色 */
+  line-height: 1.5; /* 设置行高 */
+}
+
+
+/* 文本样式 */
+.font {
+  display: flex; /* 使用 Flex 布局 */
+  justify-content: center; /* 在水平方向上居中 */
+  align-items: center; /* 在垂直方向上居中 */
+  font-size: 50rpx; /* 设置字体大小 */
+  font-weight: bolder;
+  color: #168d8d; /* 设置字体颜色 */
+  text-align: center; /* 文本居中对齐 */
+  line-height: 1.5; /* 设置行高 */
+}
+.font1 {
+    display: flex; /* 使用 Flex 布局 */
+    justify-content: center; /* 在水平方向上居中 */
+    align-items: center; /* 在垂直方向上居中 */
+    font-size: 30rpx; /* 设置字体大小 */
+    font-weight: bolder;
+    color: #168d8d; /* 设置字体颜色 */
+    text-align: center; /* 文本居中对齐 */
+    line-height: 1.5; /* 设置行高 */
+  }

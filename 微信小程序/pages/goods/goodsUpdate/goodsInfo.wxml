@@ -1,0 +1,53 @@
+<view class="header">
+
+  <view class="header-amount">
+    <view class="left">
+      <text class="consume-text">详情信息</text>
+      <view class="consume">{{goodsInfo.name}}</view>
+    </view>
+    <view class="right">
+      <view>
+        <text class="tip-text">类别</text>
+        <view class="tip">{{kindtext[goodsInfo.kind]}}</view>
+      </view>
+      <view>
+        <text class="tip-text">当前状态</text>
+        <view class="tip">{{status[goodsInfo.delFlag]}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<t-divider content="修改详情" align="left" style="margin-top: 50rpx;" />
+<view class="info" style="margin-top: 50rpx;">
+  <t-input label="说明" prefixIcon="/images/发现.png" placeholder="请填写文字" align="right" bind:change="handleInfoInput" />
+
+  <t-input label="规格" prefixIcon="/images/6.png" placeholder="请填写文字，如100克" align="right" bind:change="handleSpecificationInput" />
+
+  <t-input label="热量" prefixIcon="/images/热量.png" placeholder="请填写数字" suffix="千卡" align="right" type="number" bind:change="handleCaloricInput" />
+
+  <!-- <t-input label="类别" prefixIcon="/images/3.png" placeholder="{{goodsInfo.kind}}:{{kindtext[goodsInfo.kind-1]}}" align="center" status="warning" tips="修改只需要填写数字" bind:change="handleKindInput" /> -->
+  <!-- <t-cell leftIcon="/images/3.png" title="收藏" hover note="{{note[upKind]}}">
+    <t-switch 
+    bind:change="handleChange"
+    value="{{defaultValue}}" 
+    defaultValue="{{defaultValue}}" 
+    icon="{{['check', 'close']}}" 
+    slot="note" />
+  </t-cell> -->
+
+  <t-input label="收藏" prefixIcon="/images/3.png" placeholder="{{note[upKind>2?1:0]}}" align="right" disabled>
+    <t-button slot="suffix" theme="primary" size="extra-small" bind:tap="upKindChange"> 切换 </t-button>
+  </t-input>
+</view>
+
+
+<view class="button" style="padding-top:100rpx;">
+
+
+  <view class="button-example" style="display: flex; ">
+    <!-- <t-button size="large" theme="primary" variant="outline" bind:tap="getGoodsInfo">刷新详情</t-button> -->
+    <t-button size="large" theme="light" variant="outline" bind:tap="updateGoodsInfo" style="flex: 1;">更新详情</t-button>
+    <t-button size="large" theme="danger" variant="outline" bind:tap="delGoodsInfo" style="flex: 1;">删除详情</t-button>
+  </view>
+
+</view>

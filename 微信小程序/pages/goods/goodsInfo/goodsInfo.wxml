@@ -1,0 +1,72 @@
+<view class="header">
+
+  <view class="header-amount">
+    <view class="left">
+      <text class="consume-text">详情信息</text>
+      <view class="consume">{{goodsInfo.name}}</view>
+    </view>
+    <view class="right">
+      <view>
+        <text class="tip-text">分类</text>
+        <view class="tip">{{kindtext[goodsInfo.kind >= 3 ? goodsInfo.kind-3 : goodsInfo.kind-1]}}</view>
+      </view>
+      <view>
+        <text class="tip-text">当前状态</text>
+        <view class="tip">{{status[goodsInfo.delFlag]}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- <view class="info">
+  <t-input disabled="true" label="说明" placeholder="{{goodsInfo.info}}" align="center" bind:change="handleInfoInput" />
+
+  <t-input disabled="true" label="规格" placeholder="{{goodsInfo.specification}}" align="center" bind:change="handleSpecificationInput" />
+
+  <t-input disabled="true" label="热量" placeholder="{{goodsInfo.caloric}}千卡" align="center" status="success" bind:change="handleCaloricInput" />
+
+  <t-input disabled="true" label="状态" placeholder="{{is3[goodsInfo.kind >= 3 ? 1 : 0]}}" align="center" status="warning" bind:change="handleKindInput" />
+
+
+
+</view> -->
+<t-cell-group class="info" theme="card">
+  <t-cell title="说明" leftIcon="/images/发现.png" hover note="{{goodsInfo.info}}" />
+  <t-cell title="规格" leftIcon="/images/6.png" hover note="{{goodsInfo.specification}}" />
+  <t-cell title="热量" leftIcon="/images/热量.png" hover note="{{goodsInfo.caloric}}千卡" />
+  <t-cell title="状态" leftIcon="/images/3.png" hover note="{{is3[goodsInfo.kind >= 3 ? 1 : 0]}}  " />
+</t-cell-group>
+
+<!-- 添加记录 -->
+<view class="add" >
+
+  <!-- <view class="divider-demo__title">带文字水平分割线</view> -->
+  <t-divider content="添加记录" align="left" />
+  <view style="width: 660rpx; height: 100rpx">
+    <t-cell title="日期与数量" hover note="{{dateText || '选择日期'}}" arrow data-mode="date" bindtap="showPicker" class="test" t-class="panel-item"  style=" left: 20rpx; right:10rpx" />
+    <!-- 年月日 -->
+    <t-date-time-picker title="选择日期" visible="{{dateVisible}}" mode="date" defaultValue="{{date}}" format="YYYY-MM-DD" bindchange="onConfirm" bindpick="onColumnChange" bindcancel="hidePicker" start="{{start}}" end="{{end}}" />
+
+  </view>
+  <view class="stepper-example" style="box-sizing: border-box">
+    <t-stepper value="{{value}}" size="large" theme="filled" bind:change="handleChange" />
+  </view>
+  <view class="button-example1" style="margin-left: -10%">
+    <t-button size="large" theme="primary" bind:tap="addDetails">添加记录</t-button>
+  </view>
+</view>
+
+
+
+<view class="button">
+  <t-divider />
+  <!-- <view class="divider-demo__title">带文字水平分割线</view> -->
+  <t-divider content="编辑" align="left" />
+  <view class="button-example">
+    <!-- <t-button size="large" theme="primary" variant="outline" bind:tap="getGoodsInfo">刷新详情</t-button>
+    <t-button size="large" theme="light" variant="outline" bind:tap="updateGoodsInfo">更新详情</t-button>
+    <t-button size="large" theme="danger" variant="outline" bind:tap="delGoodsInfo">删除详情</t-button> -->
+    <t-button size="large" theme="light" variant="outline" hover bind:tap="toUpdate" data-pid="{{item.pid}}" style="margin: 20px; display: flex;justify-content: center;align-items: center;">编辑详情</t-button>
+  </view>
+
+</view>

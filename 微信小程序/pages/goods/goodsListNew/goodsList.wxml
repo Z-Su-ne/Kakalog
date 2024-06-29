@@ -1,0 +1,35 @@
+<view class="show" style="width: 750rpx; display: flex; box-sizing: border-box">
+  <!-- 类型筛选 -->
+  <view class="tabs"> <t-tabs  defaultValue="{{current}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs" bind:tap="getGoodsList">
+    <t-tab-panel label="ALL" value="0" icon="/images/0.png" bind:tap="getGoodsList"/>
+    <t-tab-panel label="饮食" value="1" icon="/images/1.png" bind:tap="getGoodsList"/>
+    <t-tab-panel label="运动" value="2" icon="/images/2.png" bind:tap="getGoodsList"/>
+    <t-tab-panel label="收藏" value="3" icon="/images/3.png" bind:tap="getGoodsList"/>
+  </t-tabs></view>
+ 
+
+  <!-- 内容展示 -->
+  <scroll-view class="show-cart" style="flex-grow: 1;" scroll-y>
+    <block wx:for="{{goodsList}}" wx:key="index">
+      <t-cell 
+      title="{{item.name}}" 
+      description="{{item.info}}" 
+      note="查看详情 >"
+      hover bind:tap="toGoodsInfo" 
+      data-pid="{{item.pid}}" 
+      style="white-space:pre-wrap" 
+      image="/images/{{item.kind >= 3 ? item.kind-2 : item.kind}}.png" />
+    </block>
+  </scroll-view>
+
+  <!-- 添加新内容 -->
+  <view class="button">
+    <view class="button-example">
+    <t-button theme="primary" icon="/images/编辑.png" content="没找到？加一个！" size="large" class="margin" tyle="width: 110%;" bind:tap="toAdd" ></t-button>
+  </view>
+  <view class="button-example">
+      <t-button size="large" icon="/images/订单.png" theme="light" variant="outline" bind:tap="toDetails">历史记录</t-button>
+    </view>
+  </view>
+
+</view>

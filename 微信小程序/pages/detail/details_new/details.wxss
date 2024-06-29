@@ -1,0 +1,92 @@
+.t-class-hover{
+  font-size: 100rpx;
+}
+
+.log {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  /* 根据需要调整 */
+}
+
+.select {
+  /* 类型选择部分的样式 */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.show-cart {
+  flex-grow: 1;
+}
+
+.add-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  border-radius: 20px;
+  margin-top: auto;
+  /* 推到底部 */
+  background: rgba(235, 235, 235, 0.863);
+  box-shadow: 0px 4px 8px rgba(0, 0, 1, 0.8);
+  /* 水平偏移，垂直偏移，模糊半径，颜色 */
+  position: sticky; /* 粘性定位 */
+  bottom: 0; /* 定位于视口的底部 */
+  z-index: 1; /* 设置层级，确保按钮容器在页面底部 */
+}
+
+
+.add,
+.date {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  /* 根据需要调整填充 */
+
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.add {
+  /* 添加部分的样式 */
+
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 385rpx;
+  height: 147rpx;
+  display: flex;
+  box-sizing: border-box
+}
+
+.date {
+  /* 日期选择部分的样式 */
+
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-radius: 8px;
+}
+
+/* 添加部分按钮的额外样式 */
+.add t-button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+.date t-cell{
+  font-weight: bold;
+}
+.t-cell {
+  border-radius: 5px;
+}
+
+.button {
+  border-radius: 30px;
+  height: 1000px;
+}
+

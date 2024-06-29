@@ -1,0 +1,52 @@
+
+  .image-style {
+    width: 70%; /* 设置图片宽度，widthFix模式下会保持宽高比 */
+    margin: auto auto; /* 在图片上下添加一些外边距 */
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40rpx;
+    margin-top: 40rpx;
+  }
+  .title1 {
+    display: flex;
+    font-size: 22px;
+    font-weight: bolder;
+    color: #333;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+/* article.wxss */
+.container {
+    padding: 20px;
+    font-family: 'Arial';
+  }
+  
+  .section {
+    margin-bottom: 10px;
+  }
+  
+  .title {
+    font-size: 17px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+  }
+  
+  .paragraph {
+    display: block; /* 确保它是一个块级元素，这样才能应用下面的样式 */
+    text-indent: 2em; /* 用em单位来实现首行缩进 */
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5; /* 1.5倍行距 */
+    margin-bottom: 10px; /* 段落之间的间隔 */
+    white-space: pre-line; /* 确保换行符等空白字符被保留，并在适当的地方换行 */
+  }
+  
+  /* 如果你想添加一个首行缩进的空格字符，可以这样做： */
+  .indent {
+    display: inline-block;
+    width: 2em;
+    height: 0;
+  }
+  

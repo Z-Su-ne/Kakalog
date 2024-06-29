@@ -1,0 +1,37 @@
+<view style="margin-top: 200rpx;">
+  <image src="/images/图标.png" mode="widthFix" class="pc" style="position: fixed;margin-top: -700rpx; "></image>
+  <view class="kal" style="position: relative;top: 130rpx">KaKaLog
+  </view>
+  <view class="login" style="position: relative;  top: 200rpx">用户登录
+  </view>
+
+  <view style="position: relative;  top: 240rpx">
+    <view class="register" style="color: #168d8d; position: relative; left: 45rpx; top: 45rpx; width: 106rpx; height: 41rpx; display: block; box-sizing: border-box">账号 :</view>
+    <input type="text" placeholder="请输入账号" bindinput="getUID" style="width: 400rpx; height: 70rpx; display: block; box-sizing: border-box; position: relative; left: 150rpx; top: -30rpx"></input>
+  </view>
+
+  <view style="position: relative; left: 0rpx; top: 190rpx">
+    <view style="color: #168d8d; width: 106rpx; height: 41rpx; display: block; box-sizing: border-box; position: relative; left: 45rpx; top: 52rpx">密码 :</view>
+    <input type="password" placeholder="请输入内容" placeholder="请输入密码" bindinput="getPassword" style="text-security: disc; width: 400rpx; height: 70rpx; display: block; box-sizing: border-box; position: relative; left: 150rpx; top: -23rpx"></input>
+  </view>
+  <!-- <form bindsubmit="formSubmit" report-submit="true"> -->
+  <!-- <view  style="color: #168d8d;justify-content: center;align-items: center;white-space:pre-wrap;">
+  <text class="login"> 用户登录</text>
+</view>
+<view class="c" >账号</view>
+<input type="text" placeholder="请输入账号" bindinput="getUID"></input>
+<view class="c" >密码</view>
+<input type="text" placeholder="请输入密码" bindinput="getPassword"></input> -->
+
+  <view class="tosign" style="width: 750rpx; height: 268rpx; display: flex; box-sizing: border-box; position: relative;  top: 83rpx">
+    <!-- <button theme="light" size="large" variant="text" class="gray-button" bindtap="register" style="position: relative; left: 158rpx; top: -58rpx; width: 270rpx; height: 56rpx; display: block; box-sizing: border-box">没有账号？注册一个</button> -->
+    <view class="gray-button" bindtap="register" style="position: relative; left: 410rpx; top: -40rpx">没有账号？注册
+    </view>
+    <button class="btn-login" type="plain" bindtap="loadByAccount" style="position: relative; left: -100rpx; top: 60rpx">登录</button>
+
+  </view>
+  <view style="justify-content: center;align-items: center;white-space:pre-wrap;">
+
+  </view>
+
+</view>

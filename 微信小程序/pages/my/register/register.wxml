@@ -1,0 +1,19 @@
+<view class="login" style="position: relative; left: 2rpx; top: 200rpx">用户注册
+</view>
+
+<view style="position: relative;  top: 300rpx">
+  <view class="register" style="color: #168d8d; position: relative; left: 45rpx; top: 45rpx; width: 106rpx; height: 41rpx; display: block; box-sizing: border-box">账号 :</view>
+  <input type="text" placeholder="请输入账号" bindinput="getAccount" style="width: 460rpx; height: 70rpx; display: block; box-sizing: border-box; position: relative; left: 150rpx; top: -30rpx"></input>
+</view>
+
+<view style="position: relative; left: 0rpx; top: 250rpx">
+  <view style="color: #168d8d; width: 106rpx; height: 41rpx; display: block; box-sizing: border-box; position: relative; left: 45rpx; top: 52rpx">密码 :</view>
+  <input type="password" placeholder="请输入内容" placeholder="请输入密码" bindinput="getPassword" style="text-security: disc; width: 460rpx; height: 70rpx; display: block; box-sizing: border-box; position: relative; left: 150rpx; top: -23rpx"></input>
+</view>
+<!-- <t-input  label="输入密码 :" type="password" value="{{textPassword}}" clearable /> -->
+<view class="btn">
+  <button class="btn-login" type="plain" bindtap="register" style="position: relative; width: 500rpx; top: 300rpx">注册</button>
+</view>
+<!-- <image src="/images/my/show.png" mode="widthFix" class="pc" style="position: fixed; left: 376rpx; top: 1018rpx"></image> -->
+<view style="justify-content: center;align-items: center;white-space:pre-wrap;">
+</view>

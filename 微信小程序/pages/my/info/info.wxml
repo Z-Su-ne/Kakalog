@@ -1,0 +1,19 @@
+
+  <t-cell bindtap="onTap" title="用户名" leftIcon="/images/10.png" note="{{user.name}}" hover arrow />
+  <t-cell bindtap="onTap"  title="性别" leftIcon="/images/11.png" note="{{healths.sex}}"  hover arrow />
+  <t-cell bindtap="onTap"  title="年龄（岁）" leftIcon="/images/皇冠.png" note="{{healths.age}}"  hover arrow />
+  <t-cell bindtap="onTap"  title="身高（cm）" leftIcon="/images/13.png" note="{{healths.height}}"  hover arrow />
+  <t-cell bindtap="onTap"  title="当前体重（Kg）" leftIcon="/images/7.png" note="{{healths.weightCurrent}}"  hover arrow />
+  <t-cell bindtap="onTap" title="目标体重（Kg）" leftIcon="/images/7.png" note="{{healths.weightTarget}}"  hover arrow />
+  <t-cell bindtap="onTap"  title="BMI" leftIcon="/images/8.png" note="{{healths.bmi}}"  hover arrow />
+  <t-cell title="每日卡路里摄入量（KCal）" leftIcon="/images/4.png" note="{{healths.caloriesDaily}}"  hover arrow />
+<view style="justify-content: center;align-items: center;white-space:pre-wrap;">
+    <view>
+        <text  bind:tap="gotoAbout" class="footer" >
+        卡卡记账
+        KaKaLog
+        属于你的热量账本</text>
+        <text></text>
+    </view>
+</view> 
+

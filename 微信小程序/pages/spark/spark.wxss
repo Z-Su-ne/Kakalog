@@ -1,0 +1,129 @@
+/* 聊天容器样式 */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding-bottom: 100px; /* 留出足够空间给输入框和发送按钮 */
+  }
+  
+  /* 滚动视图样式 */
+  .chat-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    scroll-behavior: smooth;
+  }
+
+  /* 消息样式 */
+/* 确保消息项是flex容器 */
+.message-item {
+    animation: message-animation 0.4s ease-out forwards;
+    display: flex;
+    justify-content: flex-end; /* 对于发送的消息，我们希望它们在flex容器的末端 */
+    margin: 5px 0; /* 消息间的间距 */
+    word-wrap: break-word; 
+    white-space: pre-wrap;
+  }
+  /* 消息样式 */
+.message.sent, .message.received {
+    padding: 10px 14px;
+    border-radius: 18px;
+    margin: 5px 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    position: relative;
+    max-width: 60%;
+  }
+  
+  .message.sent {
+    background: rgb(127, 211, 211); /* 微信发送气泡颜色 */
+    align-self: flex-end;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+  
+  .message.received {
+    background: #fff; /* 白色背景 */
+    align-self: flex-start;
+    margin-right: auto;
+    margin-left: 10px;
+  }
+  
+  /* 动画效果 */
+  @keyframes message-animation {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  /* 输入框和按钮容器样式 */
+  .input-area {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 20rpx;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 输入框样式 */
+  .input-box {
+    background-color: #f0f0f0; /* 输入框背景颜色 */
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  /* 发送按钮样式 */
+  .send-button {
+    background-color: #34B7F1; /* 发送按钮颜色 */
+    background-color: rgb(22, 141, 141);
+    color: white;
+    border: none;
+    padding: 1px 20px;
+    border-radius: 4px;
+  }
+  .send-button:active {
+    background-color: rgb(103, 197, 197); /* 点击时的颜色变化 */
+  }
+    /* 头像样式 */
+    .avatar {
+        width: 40px; /* 设置头像大小 */
+        height: 40px;
+        border-radius: 50%;
+        background-color: #eee; /* 默认背景色，以防头像加载失败 */
+    }
+    
+    /* 已发送消息的头像 */
+    .avatar.sent {
+        order: 1; /* 确保头像在消息气泡之后 */
+        margin-right: 40rpx;
+        margin-left: -20rpx;
+    }
+    
+    /* 已接收消息的头像 */
+    .avatar.received {
+        order: -1; /* 确保头像在消息气泡之前 */
+        margin-right: 5px;
+    }
+    
+    /* 使发送的消息靠右对齐，接收的消息靠左对齐 */
+    .message-item.sent {
+        justify-content: flex-end;
+    }
+    
+    .message-item.received {
+        justify-content: flex-start;
+    }

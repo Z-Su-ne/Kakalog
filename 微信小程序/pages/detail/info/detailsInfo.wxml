@@ -1,0 +1,33 @@
+<view class="header">
+
+  <view class="header-amount">
+    <view class="left" style="padding-left: 30rpx;">
+      <text class="consume-text">详情信息</text>
+      <view class="consume" style="padding-top: 30rpx;">{{detailsInfo.name}}</view>
+    </view>
+    <view class="right">
+      <view style="margin:10px">
+        <text class="tip-text">类别</text>
+        <view class="tip">{{kindtext[detailsInfo.kind >= 3 ? detailsInfo.kind-3 : detailsInfo.kind-1]}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="info" style="margin-top: 80rpx;">
+  <t-cell-group theme="card">
+    <t-cell title="说明" leftIcon="/images/发现.png" hover note="{{detailsInfo.info}}" />
+    <t-cell title="规格" leftIcon="/images/6.png" hover note="{{productsInfo.caloric}} cal (卡) /{{detailsInfo.specification}}" />
+    <t-cell title="热量" leftIcon="/images/热量.png" hover note="{{detailsInfo.caloricSum}} cal (卡)" />
+    <t-cell title="状态" leftIcon="/images/3.png" hover note="{{is3[detailsInfo.kind >= 3 ? 1 : 0]}}" />
+    <t-cell title="时间" leftIcon="/images/订单.png" hover note="{{(date-date%10000)/10000}}年{{(date-date%100)/100%100}}月{{date%100}}日" />
+  </t-cell-group>
+</view>
+
+
+<view class="button">
+  <t-divider />
+  <view class="button-example">
+    <t-button size="large" theme="danger" variant="outline" bind:tap="delGoodsInfo" style="margin: 20px; display: flex;justify-content: center;align-items: center;">删除记录</t-button>
+  </view>
+</view>

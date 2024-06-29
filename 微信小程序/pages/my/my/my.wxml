@@ -1,0 +1,45 @@
+
+<view class="container">
+    <view class="avatar">
+      <image src="/images/{{Psex}}.png" mode="" style="border-radius: 30%; width: 180rpx; height: 180rpx; position: relative; left: 0rpx; top: -54rpx" />
+    </view>
+
+  <view class="tip" style="position: relative; top: -50rpx;">
+    <text bind:tap="UserInfo" class="tip-text1" style="position: relative; left: 60rpx; top: 2rpx">{{user.name}}</text>
+    <button bind:tap="onGoLogin" style="position: relative; left: 93rpx; top: 1rpx">登出</button>
+  </view>
+  <view >
+    <text class="tip-text" style="position: relative; left: 1rpx; top: -21rpx">助力健康生活</text>
+    <!-- <button bind:tap="toGoLogin">登出</button> -->
+  </view>
+
+  <view class="main" style="position: relative; left: 0rpx; top: -87rpx">
+    <!-- <text class="tip-text">常用功能</text> -->
+
+    <l-grid l-class="grid" col-num="2" row-num="2">
+
+      <l-grid-item l-grid-item-class="item" key="one" slot="one" bind:tap="onGoTarget">
+        <image src="/images/my/category.png"></image>
+        <text>健康知识</text>
+      </l-grid-item>
+
+      <l-grid-item l-grid-item-class="item" key="two" slot="two" bind:tap="onGoInfo">
+        <image src="/images/my/myInfo.png"></image>
+        <text>个人信息</text>
+      </l-grid-item>
+
+      <l-grid-item l-grid-item-class="item" key="three" slot="three" bind:tap="onGoAbout">
+        <image src="/images/my/联系我们.png"></image>
+        <text>关于我们</text>
+      </l-grid-item>
+
+      <l-grid-item l-grid-item-class="item" key="four" slot="four">
+        <l-button special="{{true}}" open-type="share">
+          <image src="/images/my/share.png"></image>
+        </l-button>
+        <text>分享卡卡</text>
+      </l-grid-item>
+
+    </l-grid>
+  </view>
+</view>
